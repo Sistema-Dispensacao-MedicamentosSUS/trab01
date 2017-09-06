@@ -5,8 +5,8 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-Maciel da Silva Rocha email maciel.rocha@hotmail.com
-Lucas Francisco Vetis Bregonci _componente_do_grupo:email_segundo_componente@dominio.com<br>
+primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
+Lucas Francisco Vetis Bregonci:lucasvetis@hotmail.com
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
