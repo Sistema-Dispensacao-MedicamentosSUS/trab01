@@ -5,7 +5,7 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-primeiro_componente_do_grupo:email_primeiro_componente@dominio.com<br>
+Maciel da Silva Rocha :email_maciel.rocha@hotmail.com
 Lucas Francisco Vetis Bregonci:lucasvetis@hotmail.com
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
