@@ -5,20 +5,17 @@ Trabalho desenvolvido durante a disciplina de BD1
 
 ### 1. COMPONENTES<br>
 Integrantes do grupo<br>
-Maciel da Silva Rocha :email_maciel.rocha@hotmail.com
-Lucas Francisco Vetis Bregonci:lucasvetis@hotmail.com
+Maciel da Silva Rocha: email_maciel.rocha@hotmail.com<br>
+Lucas Francisco Vetis Bregonci: lucasvetis@hotmail.com<br>
+Yan Carlos Cordeiro Pitangui: yanpitangui@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
 Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
 <br>e motivação da escolha realizada. <br>
 
 ### 3.MINI-MUNDO<br>
-
-Descrever o mini-mundo! (Não deve ser maior do que 30 linhas) <br>
-Entrevista com o usuário e identificação dos requisitos.<br>
-Descrição textual das regras de negócio definidas como um  subconjunto do mundo real 
-cujos elementos são propriedades que desejamos incluir, processar, armazenar, 
-gerenciar, atualizar, e que descrevem a proposta/solução a ser desenvolvida.
+O funcionário do posto de saúde faz o cadastro dos medicamentos disponíveis para a população, do cidadão usuário do SUS e a manutenção das informações no sistema (entrada e saída de medicamentos, atualização e cadastro dos dados do cidadão). Ele deve conseguir colocar o usuário do SUS na fila de medicamentos que não tem estoque imediato.<br>
+O usuário do sistema faz o login no sistema com o seu CPF ou cartão do sus, e recebe uma listagem dos medicamentos que estão disponíveis, bem como uma listagem com seus dados básicos. Quando existe falta de medicamentos, o cidadão deverá receber uma notificação quando o estoque estiver disponível, bem como o prazo máximo para retirada. Caso contrário, o cidadão perderá o lugar na fila e terá que entrar novamente.
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
