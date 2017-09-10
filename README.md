@@ -10,8 +10,7 @@ Lucas Francisco Vetis Bregonci: lucasvetis@hotmail.com<br>
 Yan Carlos Cordeiro Pitangui: yanpitangui@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
-Este documento contém a especificação do projeto do banco de dados <nome do projeto> 
-<br>e motivação da escolha realizada. <br>
+Hoje o sistema dispensação de medicamentos do SUS funciona de forma manual sem o uso de nenhum sistema informatizado para o atendimento a população.<br> O nosso projeto propõe que o usuário do sistema de saúde possa saber o estoque do posto de saúde e receber a notificação da chegada do medicamento.<br>
 
 ### 3.MINI-MUNDO<br>
 O funcionário do posto de saúde faz o cadastro dos medicamentos disponíveis para a população, do cidadão usuário do SUS e a manutenção das informações no sistema (entrada e saída de medicamentos, atualização e cadastro dos dados do cidadão). Ele deve conseguir colocar o usuário do SUS na fila de medicamentos que não tem estoque imediato.<br>
@@ -20,9 +19,10 @@ O usuário do sistema faz o login no sistema com o seu CPF ou cartão do sus, e 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
 
-Sugestão: https://balsamiq.com/products/mockups/<br>
+Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
 
-![Alt text](https://github.com/discipbd1/trab01/blob/master/balsamiq.png?raw=true "Title")
+[Protótipo da visão do usuário](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/Vis%C3%A3o%20do%20Paciente.pdf)
+[Protótipo da visão do funcionário do posto de saúde - WIP](www.google.com)
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas.
@@ -30,15 +30,22 @@ Sugestão: https://balsamiq.com/products/mockups/<br>
     e deve ser criada antes do modelo conceitual
     c) Após criada esta tabela não deve ser modificada, pois será comparada com a tabela final na conclusão do trabalho
     
-    
 #### 4.2 QUAIS PERGUNTAS PODEM SER RESPONDIDAS COM O SISTEMA PROPOSTO?
-    a) O sistema proposto poderá fornecer quais tipos de relatórios e informaçes? 
-    b) Crie uma lista com os 10 principais relatórios que podero ser obtidos por meio do sistema proposto!
+    1. Relatório de quantidade de usuários por posto de saúde.
+    2. Relatório de quantidade de medicamentos em estoque.
+    3. Relatório de utilização mensal de medicamentos por posto de saúde.
+    4. Relatório de utilização mensal de medicamentos por pessoa.
+    5. Relatório de utilização anual de medicamentos por posto de saúde.
+    6. Relatório de utilização anual de medicamentos por pessoa.
+    7. Relatório de usuários por sexo.
+    8. Relatório de usuários por posto de saúde.
+    9. Relatório de usuários por região.
+    10. Relatório de filas de medicamentos.
     
 >## Marco de Entrega 01 em: (06/09/2017)<br>
 
 ### 5.MODELO CONCEITUAL<br>
-    A) NOTACAO ENTIDADE RELACIONAMENTO 
+    A) NOTACAO ENTIDADE RELACIONAMENTO
         * Para nosso prótótipo limitaremos o modelo conceitual nas 6 principais entidades do escopo
         * O protótipo deve possui no mínimo duas relações N para N
         * o mínimo de entidades do modelo conceitual será igual a 5
