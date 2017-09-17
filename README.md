@@ -73,11 +73,35 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     b) justifique!
 
 #### 5.3 DESCRIÇÃO DOS DADOS 
-    [objeto]: [descrição do objeto]
+    [Unidade  de saúde]:Tabela que armazena as informaçoes relativas da unidade de saúde.
+    Nome:Campo que guarda o nome da unidade de saúde
+    Bairro:Campo que contém bairro onde fica localizado a unidade de saúde.
+    Idposto:campo que armazena o numero único de identificação de cada posto.
     
-    EXEMPLO:
-    CLIENTE: Tabela que armazena as informações relativas ao cliente<br>
-    CPF: campo que armazena o número de Cadastro de Pessoa Física para cada cliente da empresa.<br>
+    [Tipo  de Unidade]:Tabela que armazena o tipo especifico de cada unidade de saúde.
+    Nome:Campo que guarda o nome do tipo da unidade de saúde
+    Id_tipo:campo que armazena o numero de identificação de cada posto.
+    
+    
+    [Medicamento]:Tabela que armazena as informaçoes relativas ao medicamento.
+    Nome:Campo que guarda o nome do medicamento.
+    Quantidade:Campo que contém a quantidade do medicamento disponivel.
+    Id_medicamento:campo que armazena o numero de identificação do medicamento.
+    
+    [lote_medicamento]:Tabela que armazena as informaçoes relativas ao lote do medicamento.
+    data_validade:campo que guarda a data de validade do lote do medicamento.
+    data_fabricação:campo que guarda a data de fabricação do lote do medicamento.
+    Id_lote:campo que armazena o numero de identificação do lote do medicamento.
+    
+    
+    [Funcionário]:Tabela que armazena  as informações relativas ao funcionário.
+    Matricula:Campo que guarda o número da matricula para cada funcionário da unidade de saúde.
+    
+    [Cidadão]:Tabela que armazena  as informações relativas ao cidadão.
+    email:Campo que guarda o emaildo cidadão.
+    cartão_sus:campo que armazena o numero de identificação do sus do cidadão.
+    
+    
 
 
 ### 6	MODELO LÓGICO<br>
