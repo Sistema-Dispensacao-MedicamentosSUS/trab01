@@ -1,4 +1,4 @@
-# TRABALHO 01:  Título do Trabalho
+# TRABALHO 01:  Sistema de dispensação de medicamentos do SUS
 Trabalho desenvolvido durante a disciplina de BD1
 
 # Sumário
