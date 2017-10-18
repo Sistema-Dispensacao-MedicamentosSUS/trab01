@@ -50,7 +50,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
         * O protótipo deve possui no mínimo duas relações N para N
         * o mínimo de entidades do modelo conceitual será igual a 5
         
-![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/modelo_conceitual.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/e67cb3605f45334af1c65ceb2c2cf07a636c5221/modelo_conceitual.png?raw=true "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
