@@ -85,7 +85,6 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     
     [Medicamento]:Tabela que armazena as informaçoes relativas ao medicamento.
     Nome:Campo que guarda o nome do medicamento.
-    Quantidade:Campo que contém a quantidade do medicamento disponivel.
     Id_medicamento:campo que armazena o numero de identificação do medicamento.
     
     [lote_medicamento]:Tabela que armazena as informaçoes relativas ao lote do medicamento.
@@ -93,6 +92,8 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     data_fabricação:campo que guarda a data de fabricação do lote do medicamento.
     Id_lote:campo que armazena o numero de identificação do lote do medicamento.
     
+    [estoque]: tabela associativa que liga medicamentos à lotes e a unidades de saude.
+    Quantidade:Campo que contém a quantidade do medicamento disponivel, referente ao lote e unidade associado.
     
     [Funcionário]:Tabela que armazena  as informações relativas ao funcionário.
     Matricula:Campo que guarda o número da matricula para cada funcionário da unidade de saúde.
