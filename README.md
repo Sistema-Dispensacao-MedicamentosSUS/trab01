@@ -40,7 +40,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     7. Relatório de usuários por sexo.
     8. Relatório de usuários por posto de saúde.
     9. Relatório de usuários por região.
-    10. Relatório de filas de medicamentos.
+    10. Relatório de espera de medicamentos.
     
 >## Marco de Entrega 01 em: (06/09/2017)<br>
 
