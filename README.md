@@ -65,12 +65,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
-    [atributo]: [descrição da decisão]
-    
-    EXEMPLO:
-    a) Campo endereço: em nosso projeto optamos por um campo multivalorado e composto, pois a empresa 
-    pode possuir para cada departamento mais de uma localização... 
-    b) justifique!
+    lista_medicamentos: Este atributo é multivalorado para permitir que o usuário cadastre vários, sem limite.
 
 #### 5.3 DESCRIÇÃO DOS DADOS 
     [Unidade  de saúde]:Tabela que armazena as informaçoes relativas da unidade de saúde.
@@ -101,6 +96,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     [Cidadão]:Tabela que armazena  as informações relativas ao cidadão.
     email:Campo que guarda o emaildo cidadão.
     cartão_sus:campo que armazena o numero de identificação do sus do cidadão.
+    lista_medicamentos: lista de medicamentos que o cidadão deseja obter.
     
     
 
