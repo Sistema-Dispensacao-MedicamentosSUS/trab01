@@ -103,16 +103,12 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
 
 
 ### 6	MODELO LÓGICO<br>
-        a) inclusão do modelo lógico do banco de dados
-        b) verificação de correspondencia com o modelo conceitual 
-        (não serão aceitos modelos que não estejam em conformidade)
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/L%C3%B3gico_1.png?raw=true "Modelo Conceitual")
 
 >## Marco de Entrega 02 em: (Data definida no cronograma)<br>
 
 ### 7	MODELO FÍSICO<br>
-        a) inclusão das instruções de criacão das estruturas DDL 
-        (criação de tabelas, alterações, etc..)
-          
+[Modelo Físico](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/fisico.sql)
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
