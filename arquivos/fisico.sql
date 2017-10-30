@@ -1,4 +1,4 @@
-/* Lógico_1: */
+/* LÃ³gico_1: */
 
 CREATE TABLE Unidade_saude (
     nome VARCHAR,
@@ -10,7 +10,7 @@ CREATE TABLE Unidade_saude (
 
 CREATE TABLE Pessoa (
     nome VARCHAR,
-    cpf INT PRIMARY KEY,
+    cpf BIGINT PRIMARY KEY,
     sexo CHAR
 );
 
