@@ -3,9 +3,9 @@
 CREATE TABLE Unidade_saude (
     nome VARCHAR,
     bairro VARCHAR,
-    id_posto INT PRIMARY KEY,
-    cidade VARCHAR,
-    FK_Tipo_unidade_id_tipo INT
+    id_posto SERIAL PRIMARY KEY,
+    FK_Tipo_unidade_id_tipo INTEGER,
+    FK_cidade_id_cidade INTEGER
 );
 
 CREATE TABLE Pessoa (
@@ -15,47 +15,49 @@ CREATE TABLE Pessoa (
 );
 
 CREATE TABLE Medicamento (
-    nome VARCHAR,
-    id_medicamento INT PRIMARY KEY
+    id_medicamento INTEGER PRIMARY KEY,
+    nome VARCHAR
 );
 
 CREATE TABLE Tipo_unidade (
-    id_tipo INT PRIMARY KEY,
+    id_tipo INTEGER PRIMARY KEY,
     nome VARCHAR
 );
 
 CREATE TABLE Cidadao (
-    cartao_sus INT,
+    cartao_sus BIGINT PRIMARY KEY,
     email VARCHAR,
-    FK_lista_medicamento_lista_medicamento_PK INT,
-    cidade VARCHAR,
-    FK_Pessoa_cpf INT,
-    FK_Unidade_saude_id_posto INT,
-    PRIMARY KEY (cartao_sus, FK_Pessoa_cpf)
+    FK_Unidade_saude_id_posto SERIAL,
+    FK_cidade_id_cidade INTEGER
 );
 
 CREATE TABLE Funcionario_sus (
-    matricula INT,
-    FK_Pessoa_cpf INT,
+    matricula INTEGER,
+    FK_Pessoa_cpf BIGINT,
     PRIMARY KEY (matricula, FK_Pessoa_cpf)
 );
 
 CREATE TABLE Lote_medicamentos (
-    id_lote INT PRIMARY KEY,
+    id_lote FLOAT PRIMARY KEY,
     data_validade DATE,
     data_fabricacao DATE
 );
 
 CREATE TABLE Estoque_tem_Unidade_saude_Medicamento_Lote_medicamentos (
-    quantidade INT,
-    FK_Unidade_saude_id_posto INT,
-    FK_Medicamento_id_medicamento INT,
-    FK_Lote_medicamentos_id_lote INT
+    quantidade INTEGER,
+    FK_Unidade_saude_id_posto SERIAL,
+    FK_Medicamento_id_medicamento INTEGER,
+    FK_Lote_medicamentos_id_lote FLOAT
 );
 
-CREATE TABLE lista_medicamento (
-    lista_medicamento_PK INT NOT NULL PRIMARY KEY,
-    lista_medicamento VARCHAR
+CREATE TABLE cidade (
+    id_cidade INTEGER PRIMARY KEY,
+    nome_cidade VARCHAR
+);
+
+CREATE TABLE cidadao_medicamento (
+    FK_Medicamento_id_medicamento INTEGER,
+    FK_Cidadao_cartao_sus BIGINT
 );
  
 ALTER TABLE Unidade_saude ADD CONSTRAINT FK_Unidade_saude_1
@@ -63,19 +65,19 @@ ALTER TABLE Unidade_saude ADD CONSTRAINT FK_Unidade_saude_1
     REFERENCES Tipo_unidade (id_tipo)
     ON DELETE CASCADE ON UPDATE CASCADE;
  
-ALTER TABLE Cidadao ADD CONSTRAINT FK_Cidadao_1
-    FOREIGN KEY (FK_lista_medicamento_lista_medicamento_PK)
-    REFERENCES lista_medicamento (lista_medicamento_PK)
-    ON DELETE NO ACTION ON UPDATE NO ACTION;
- 
-ALTER TABLE Cidadao ADD CONSTRAINT FK_Cidadao_2
-    FOREIGN KEY (FK_Pessoa_cpf)
-    REFERENCES Pessoa (cpf)
+ALTER TABLE Unidade_saude ADD CONSTRAINT FK_Unidade_saude_2
+    FOREIGN KEY (FK_cidade_id_cidade)
+    REFERENCES cidade (id_cidade)
     ON DELETE CASCADE ON UPDATE CASCADE;
  
-ALTER TABLE Cidadao ADD CONSTRAINT FK_Cidadao_3
+ALTER TABLE Cidadao ADD CONSTRAINT FK_Cidadao_1
     FOREIGN KEY (FK_Unidade_saude_id_posto)
     REFERENCES Unidade_saude (id_posto)
+    ON DELETE CASCADE ON UPDATE CASCADE;
+ 
+ALTER TABLE Cidadao ADD CONSTRAINT FK_Cidadao_2
+    FOREIGN KEY (FK_cidade_id_cidade)
+    REFERENCES cidade (id_cidade)
     ON DELETE CASCADE ON UPDATE CASCADE;
  
 ALTER TABLE Funcionario_sus ADD CONSTRAINT FK_Funcionario_sus_1
@@ -94,3 +96,13 @@ ALTER TABLE Estoque_tem_Unidade_saude_Medicamento_Lote_medicamentos ADD CONSTRAI
 ALTER TABLE Estoque_tem_Unidade_saude_Medicamento_Lote_medicamentos ADD CONSTRAINT FK_Estoque_tem_Unidade_saude_Medicamento_Lote_medicamentos_2
     FOREIGN KEY (FK_Lote_medicamentos_id_lote)
     REFERENCES Lote_medicamentos (id_lote);
+ 
+ALTER TABLE cidadao_medicamento ADD CONSTRAINT FK_cidadao_medicamento_0
+    FOREIGN KEY (FK_Medicamento_id_medicamento)
+    REFERENCES Medicamento (id_medicamento)
+    ON DELETE SET NULL ON UPDATE CASCADE;
+ 
+ALTER TABLE cidadao_medicamento ADD CONSTRAINT FK_cidadao_medicamento_1
+    FOREIGN KEY (FK_Cidadao_cartao_sus)
+    REFERENCES Cidadao (cartao_sus)
+    ON DELETE SET NULL ON UPDATE CASCADE;
