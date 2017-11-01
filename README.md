@@ -61,7 +61,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
         
     
 #### 5.1 Validação do Modelo Conceitual
-    [Grupo01]: [Nomes dos que participaram na avaliação]
+    [Grupo01]: Leonir dos Reis Alves
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
