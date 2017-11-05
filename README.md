@@ -102,7 +102,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
 
 
 ### 6	MODELO LÓGICO<br>
-![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/edbfd0e02ef5503add54774f7b64bf750c15807a/arquivos/L%C3%B3gico_1.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/892a26703352928a84a9f2429db9c49c84bf01c8/arquivos/L%C3%B3gico_1.png?raw=true "Modelo Conceitual")
 
 >## Marco de Entrega 02 em: (Data definida no cronograma)<br>
 
