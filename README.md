@@ -111,33 +111,115 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
         
 ### 8	INSERT APLICADO NAS TABELAS DO BANCO DE DADOS<br>
 #### 8.1 DETALHAMENTO DAS INFORMAÇÕES
-        a) inclusão das instruções de inserção dos dados nas tabelas criadas pelo script de modelo físic
-        b) formato .SQL
+[Inserts](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/insert.sql)
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script 
-        (create para tabelas e estruturas de dados + dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
+        ???
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
-        a) Junção dos scripts anteriores em um único script 
-        (Drop table + Create de tabelas e estruturas de dados + dados a serem inseridos)
-        b) Criar um novo banco de dados para testar a restauracao 
-        (em caso de falha na restauração o grupo não pontuará neste quesito)
-        c) formato .SQL
-
+        ???
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
-    OBS: Incluir para cada tópico as instruções SQL + imagens (print da tela) mostrando os resultados.<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
-#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
-#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 6)
-     a) Criar no mínimo 2 com operadores lógicos
-     b) Criar no mínimo 2 com operadores aritméticos
-     c) Criar no mínimo 2 com operação de renomear campo
-#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 4) <br>
+```sql
+SELECT * FROM cidadao;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_cidadao.PNG?raw=true "Select Cidadao")
+```sql
+SELECT * FROM cidadao_medicamento;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_cidadao_medicamento.PNG?raw=true "Select Cidadao_medicamento")
+```sql
+SELECT * FROM cidade;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_cidade.PNG?raw=true "Select Cidade")
+```sql
+SELECT * FROM estoque_unidade;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_estoque_unidade.PNG?raw=true "Select Estoque_unidade")
+```sql
+SELECT * FROM funcionario_sus;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_funcionario_sus.PNG?raw=true "Select Funcionario_sus")
+```sql
+SELECT * FROM lote_medicamentos;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_lote_medicamentos.PNG?raw=true "Select Lote_medicamentos")
+```sql
+SELECT * FROM medicamento;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_medicamento.PNG?raw=true "Select Cidade")
+```sql
+SELECT * FROM pessoa;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_pessoa.PNG?raw=true "Select Pessoa")
+```sql
+SELECT * FROM tipo_unidade;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_tipo_unidade.PNG?raw=true "Select Tipo_unidade")
+```sql
+SELECT * FROM unidade_saude;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_unidade_saude.PNG?raw=true "Select Unidade_saude")
 
+#### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
+```sql
+SELECT * FROM estoque_unidade WHERE quantidade>12;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/where_1.PNG?raw=true "Select where")
+```sql
+SELECT * FROM estoque_unidade WHERE quantidade<20;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/where_2.PNG?raw=true "Select where")
+```sql
+SELECT * FROM lote_medicamentos WHERE data_validade<current_date;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/where_3.PNG?raw=true "Select where")
+```sql
+SELECT * FROM lote_medicamentos WHERE data_validade>current_date;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/where_4.PNG?raw=true "Select where")
+#### 9.3	CONSULTAS QUE USAM OPERADORES LÓGICOS, ARITMÉTICOS E CAMPOS RENOMEADOS (Mínimo 6)<br>
+```sql
+SELECT * FROM pessoa WHERE sexo='F';
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/logico_1.PNG?raw=true "Select Logico")
+```sql
+SELECT * FROM pessoa WHERE sexo='M';
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/logico_2.PNG?raw=true "Select Logico")
+```sql
+SELECT * FROM lote_medicamentos WHERE (data_validade-current_date)>=30;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/aritm_1.PNG?raw=true "Select Aritmetico")
+```sql
+SELECT * FROM lote_medicamentos WHERE (data_validade-'2017-01-01')<100;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/aritm_2.PNG?raw=true "Select Aritmetico")
+```sql
+SELECT id_lote, (data_validade-current_date) as "dias_vencimento" FROM lote_medicamentos;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/renom_1.PNG?raw=true "Select Renomeado")
+```sql
+SELECT id_lote, (current_date-data_fabricacao) as "dias_fabricacao" FROM lote_medicamentos;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/renom_2.PNG?raw=true "Select Renomeado")
+#### 9.4	CONSULTAS QUE USAM OPERADORES LIKE (Mínimo 4) <br>
+```sql
+SELECT * FROM medicamento WHERE nome LIKE '%ina';
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/like_1.PNG?raw=true "Select Like")
+```sql
+SELECT * FROM medicamento WHERE nome LIKE '%ol';
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/like_2.PNG?raw=true "Select Like")
+```sql
+SELECT * FROM medicamento WHERE nome LIKE '%am';
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/like_3.PNG?raw=true "Select Like")
+```sql
+SELECT * FROM pessoa WHERE nome ILIKE 'Jo%';
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/like_4.PNG?raw=true "Select Like")
 >## Marco de Entrega 03 em: (Data definida no cronograma)<br>
     
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
