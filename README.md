@@ -115,9 +115,9 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
 [Inserts](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/insert.sql)
 
 #### 8.2 INCLUSÃO DO SCRIPT PARA CRIAÇÃO DE TABELA E INSERÇÃO DOS DADOS
-        ???
+[Modelo Físico + Inserts](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/fisico_insert.sql)
 #### 8.3 INCLUSÃO DO SCRIPT PARA EXCLUSÃO DE TABELAS EXISTENTES, CRIAÇÃO DE TABELA NOVAS E INSERÇÃO DOS DADOS
-        ???
+[Modelo Físico + Inserts + Drops](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/fisico_insert_drop.sql)
 
 ### 9	TABELAS E PRINCIPAIS CONSULTAS<br>
 #### 9.1	CONSULTAS DAS TABELAS COM TODOS OS DADOS INSERIDOS (Todas) <br>
