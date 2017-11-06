@@ -64,7 +64,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     [Grupo02]: [Nomes dos que participaram na avaliação]
 
 #### 5.2 DECISÕES DE PROJETO
-    lista_medicamentos: Este atributo é multivalorado para permitir que o usuário cadastre vários, sem limite.
+
     O cidadão poderá ter apenas uma unidade de referência, que é a do seu bairro. Através do seu endereço poderá pegar da unidade municipal e estadual de onde mora.
 
 #### 5.3 DESCRIÇÃO DOS DADOS 
