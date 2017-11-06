@@ -77,7 +77,6 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     Nome:Campo que guarda o nome do tipo da unidade de saúde
     Id_tipo:campo que armazena o numero de identificação de cada posto.
     
-    
     [Medicamento]:Tabela que armazena as informaçoes relativas ao medicamento.
     Nome:Campo que guarda o nome do medicamento.
     Id_medicamento:campo que armazena o numero de identificação do medicamento.
@@ -96,11 +95,13 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     [Cidadão]:Tabela que armazena  as informações relativas ao cidadão.
     email:Campo que guarda o emaildo cidadão.
     cartão_sus:campo que armazena o numero de identificação do sus do cidadão.
-    lista_medicamentos: lista de medicamentos que o cidadão deseja obter.
     
+    [Cidade]:Tabela que armazena a cidade onde reside o cidadão.
+    id_cidade:Campo que guarda o numero de identificação da cidade.
+    nome:campo que guarda o nome da cidade.
     
-
-
+    [Cidadão Medicamento]:Tabela que armazena os medicamentos que o cidadão deseja.
+    
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/892a26703352928a84a9f2429db9c49c84bf01c8/arquivos/L%C3%B3gico_1.png?raw=true "Modelo Conceitual")
 
