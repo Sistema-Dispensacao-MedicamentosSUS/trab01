@@ -234,18 +234,6 @@ SELECT * FROM pessoa WHERE nome ILIKE 'Jo%';
         b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
 ### 10	ATUALIZAÇÃO DA DOCUMENTAÇÃO DOS SLIDES PARA APRESENTAÇAO FINAL (Mínimo 6 e Máximo 10)<br>
-### 11	TUTORIAL COMPLETO DE PASSOS PARA RESTAURACAO DO BANCO E EXECUCAO DE PROCEDIMENTOS ENVOLVIDOS NO TRABALHO PARA OBTENÇÃO DOS RESULTADOS<br>
-        a) Outros grupos deverão ser capazes de restaurar o banco 
-        b) executar todas as consultas presentes no trabalho
-        c) executar códigos que tenham sido construídos para o trabalho 
-        d) realizar qualquer procedimento executado pelo grupo que desenvolveu o trabalho
-        
-### 12   DIFICULDADES ENCONTRADAS PELO GRUPO<br>
-### 13   TRABALHO DE MINERAÇÃO DE DADOS
-        a) captura das informaçõs
-        b) integração com banco de dados em desenvolvimento
-        c) atualização da documentação do trabalho incluindo a mineração de dados
-        
 ### 13  FORMATACAO NO GIT: https://help.github.com/articles/basic-writing-and-formatting-syntax/
 
 ### 14 Backup completo do banco de dados postgres 
