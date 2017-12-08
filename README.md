@@ -49,7 +49,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
         * O protótipo deve possui no mínimo duas relações N para N
         * o mínimo de entidades do modelo conceitual será igual a 5
         
-![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/modelo_conceitual.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/7a2c562d0566ba9868d4b8cf2ba957da1ef94f05/arquivos/modelo_conceitual.png?raw=true "Modelo Conceitual")
     
     B) NOTACAO UML (Caso esteja fazendo a disciplina de analise)
     C) QUALIDADE 
@@ -103,7 +103,7 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     [Cidadão Medicamento]:Tabela que armazena os medicamentos que o cidadão deseja.
     
 ### 6	MODELO LÓGICO<br>
-![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/892a26703352928a84a9f2429db9c49c84bf01c8/arquivos/L%C3%B3gico_1.png?raw=true "Modelo Conceitual")
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/L%C3%B3gico_1.png?raw=true "Modelo Lógico")
 
 >## Marco de Entrega 02 em: (Data definida no cronograma)<br>
 
