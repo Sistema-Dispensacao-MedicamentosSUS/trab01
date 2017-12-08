@@ -274,6 +274,14 @@ SELECT * FROM pessoa WHERE nome ILIKE 'Jo%';
 >## Marco de Entrega 03 em: (Data definida no cronograma)<br>
     
 #### 9.5	ATUALIZAÇÃO E EXCLUSÃO DE DADOS (Mínimo 6)<br>
+```sql
+UPDATE pessoa SET sexo='F', nome='Teste' WHERE cpf=2593481;
+DELETE FROM tipo_contato WHERE id_tp_contato=4;
+DELETE FROM pessoa WHERE nome='Keila';
+DELETE FROM pessoa WHERE cpf=2593481;
+DELETE FROM pessoa WHERE nome LIKE '%gna';
+UPDATE contato SET descricao_contato='thiaguinho@gmail.com' WHERE id_contato=4;
+```
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
         a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
         b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
