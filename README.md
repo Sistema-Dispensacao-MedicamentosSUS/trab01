@@ -70,12 +70,11 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
 #### 5.3 DESCRIÇÃO DOS DADOS 
     [Unidade  de saúde]:Tabela que armazena as informaçoes relativas da unidade de saúde.
     Nome:Campo que guarda o nome da unidade de saúde
-    Bairro:Campo que contém bairro onde fica localizado a unidade de saúde.
     Idposto:campo que armazena o numero único de identificação de cada posto.
     
     [Tipo  de Unidade]:Tabela que armazena o tipo especifico de cada unidade de saúde.
-    Nome:Campo que guarda o nome do tipo da unidade de saúde
-    Id_tipo:campo que armazena o numero de identificação de cada posto.
+    tp_unidade_descricao:Campo que descreve de que tipo  é a unidade.
+    Id_unidade:campo que armazena o numero de identificação do tipo de unidade.
     
     [Medicamento]:Tabela que armazena as informaçoes relativas ao medicamento.
     Nome:Campo que guarda o nome do medicamento.
@@ -88,19 +87,50 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     
     [estoque]: tabela associativa que liga medicamentos à lotes e a unidades de saude.
     Quantidade:Campo que contém a quantidade do medicamento disponivel, referente ao lote e unidade associado.
+    data_entrada:Campo que armazena a data de entrada de um lote de medicamentos na unidade se saúde.
+    Id_estoque:campo que armazena o numero de identificação do id_estoque do medicamento.
     
     [Funcionário]:Tabela que armazena  as informações relativas ao funcionário.
     Matricula:Campo que guarda o número da matricula para cada funcionário da unidade de saúde.
-    
+    senha:Campo que guarda a senha de logon do funcionário.
+   
     [Cidadão]:Tabela que armazena  as informações relativas ao cidadão.
-    email:Campo que guarda o emaildo cidadão.
+    senha:Campo que guarda a senha de logon do cidadão.
     cartão_sus:campo que armazena o numero de identificação do sus do cidadão.
+    num_endereco:campo que armazena o numero de endereco da residencia do cidadão.
     
     [Cidade]:Tabela que armazena a cidade onde reside o cidadão.
     id_cidade:Campo que guarda o numero de identificação da cidade.
     nome:campo que guarda o nome da cidade.
     
-    [Cidadão Medicamento]:Tabela que armazena os medicamentos que o cidadão deseja.
+    [Retirada]:Tabela que armazena as informaçoes a respeito da retirada de um medicamento.
+    dt_hr_retirada:
+    quantidade_retirada:
+    id_retirada::Campo que guarda o numero de identificação da cidade.
+
+    [tipo_contato] 
+    id_tp_contato:
+    tp_contato_descricao:
+    
+    [Logradouro] 
+    nome_rua:
+    cep:
+    
+    [Bairro] 
+    id_bairro:
+    nome_bairro:
+    
+    [Municipio] 
+    id_municipio:
+    nome_municipio:
+    
+    [Estado]: 
+    id_estado:
+    nome_estado:
+    
+    
+    
+    
     
 ### 6	MODELO LÓGICO<br>
 ![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/arquivos/L%C3%B3gico_1.png?raw=true "Modelo Lógico")
