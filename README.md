@@ -9,7 +9,7 @@ Lucas Francisco Vetis Bregonci: lucasvetis@hotmail.com<br>
 Yan Carlos Cordeiro Pitangui: yanpitangui@gmail.com<br>
 
 ### 2.INTRODUÇÃO E MOTIVAÇAO<br>
-Hoje o sistema dispensação de medicamentos do SUS funciona de forma manual sem o uso de nenhum sistema informatizado para o atendimento a população.<br> O nosso projeto propõe que o usuário do sistema de saúde possa saber o estoque do posto de saúde e receber a notificação da chegada do medicamento.<br>
+Hoje o sistema dispensação de medicamentos do SUS funciona de forma manual sem o uso de nenhum sistema informatizado para o atendimento a população.<br> O nosso projeto propõe que o usuário do sistema de saúde possa saber o estoque do posto de saúde e receber a notificação da chegada do medicamento,para assim tornar o processo mais conveniente para o usuário e e agilizar os processos de retirada.<br>
 
 ### 3.MINI-MUNDO<br>
 O funcionário do posto de saúde faz o cadastro dos medicamentos disponíveis para a população, do cidadão usuário do SUS e a manutenção das informações no sistema (entrada e saída de medicamentos, atualização e cadastro dos dados do cidadão). Ele deve conseguir colocar o usuário do SUS na fila de medicamentos que não tem estoque imediato.<br>
