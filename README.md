@@ -104,29 +104,30 @@ Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
     nome:campo que guarda o nome da cidade.
     
     [Retirada]:Tabela que armazena as informaçoes a respeito da retirada de um medicamento.
-    dt_hr_retirada:
-    quantidade_retirada:
-    id_retirada::Campo que guarda o numero de identificação da cidade.
+    dt_hr_retirada:Campo que guarda a data de retirada do medicamento.
+    quantidade_retirada:Campo que guarda a quantidade retirada do medicamento.
+    id_retirada:Campo que guarda o numero de identificação da retirada.
 
-    [tipo_contato] 
-    id_tp_contato:
-    tp_contato_descricao:
+    [tipo_contato]:Tabela que armazena as informaçoes a respeito do tipo de contato 
+    id_tp_contato:Campo que guarda o numero de identificação do tipo de contato.
+    tp_contato_descricao:Campo que descreve o tipo de contato.
     
-    [Logradouro] 
-    nome_rua:
-    cep:
+    [Logradouro]:Tabela que armazena as informaçoes a respeito do logradouro. 
+    nome_rua:Campo que armazena o nome da rua onde reside cidadão.
+    id_tp_contato:Campo que guarda o numero de identificacao do logradouro.
+    cep:Campo que armazena o numero do cep  da rua.
     
-    [Bairro] 
-    id_bairro:
-    nome_bairro:
+    [Bairro]:Tabela que armazena as informaçoes a respeito do bairro.
+    id_bairro:Campo que guarda o numero de identificação do bairro.
+    nome_bairro:Campo que armazena o nome do bairro onde reside cidadão.
     
-    [Municipio] 
-    id_municipio:
-    nome_municipio:
+    [Municipio]:Tabela que armazena as informaçoes a respeito do municipio.
+    id_municipio:Campo que guarda o numero de identificação do municipio.
+    nome_municipio:Campo que armazena o nome do municipio onde reside cidadão.
     
-    [Estado]: 
-    id_estado:
-    nome_estado:
+    [Estado]:Tabela que armazena as informaçoes a respeito do estado.
+    id_estado:Campo que guarda o numero de identificação do estado.
+    nome_estado:Campo que armazena o nome do estado reside cidadão.
     
     
     
