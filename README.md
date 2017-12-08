@@ -18,7 +18,7 @@ O usuário do sistema faz o login no sistema com o seu CPF ou cartão do sus, e 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
 
-Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
+Ferramenta utilizada: BALSAMIQ MOCKUPS
 
 [Protótipo da visão do usuário](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/visao_cidadao.pdf)<br>
 [Protótipo da visão do funcionário do posto de saúde - WIP](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/visao_funcionario.pdf)<br>
@@ -161,13 +161,25 @@ SELECT * FROM cidadao_medicamento;
 ```
 ![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_cidadao_medicamento.PNG?raw=true "Select Cidadao_medicamento")
 ```sql
-SELECT * FROM cidade;
+SELECT * FROM logradouro;
 ```
-![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_cidade.PNG?raw=true "Select Cidade")
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_logradouro.PNG?raw=true "Select logradouro")
 ```sql
-SELECT * FROM estoque_unidade;
+SELECT * FROM bairro;
 ```
-![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_estoque_unidade.PNG?raw=true "Select Estoque_unidade")
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_bairro.PNG?raw=true "Select bairro")
+```sql
+SELECT * FROM municipio;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_municipio.PNG?raw=true "Select municipio")
+```sql
+SELECT * FROM estado;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_estado.PNG?raw=true "Select estado")
+```sql
+SELECT * FROM estoque;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_estoque.PNG?raw=true "Select Estoque_unidade")
 ```sql
 SELECT * FROM funcionario_sus;
 ```
@@ -192,6 +204,10 @@ SELECT * FROM tipo_unidade;
 SELECT * FROM unidade_saude;
 ```
 ![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_unidade_saude.PNG?raw=true "Select Unidade_saude")
+```sql
+SELECT * FROM tipo_contato;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_tipo_contato.PNG?raw=true "Select tipo_contato")
 
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 ```sql
