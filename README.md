@@ -20,8 +20,8 @@ Neste ponto a codificação não e necessária, somente as ideias de telas devem
 
 Ferramenta utilizada: ADOBE EXPERIENCE DESIGN CC (BETA)
 
-[Protótipo da visão do usuário](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/Vis%C3%A3o%20do%20Paciente.pdf)<br>
-[Protótipo da visão do funcionário do posto de saúde - WIP](www.google.com)<br>
+[Protótipo da visão do usuário](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/visao_cidadao.pdf)<br>
+[Protótipo da visão do funcionário do posto de saúde - WIP](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/visao_funcionario.pdf)<br>
 
 #### 4.1 TABELA DE DADOS DO SISTEMA:
     a) Esta tabela deve conter todos os atributos do sistema e um mínimo de 10 linhas.
