@@ -208,7 +208,10 @@ SELECT * FROM unidade_saude;
 SELECT * FROM tipo_contato;
 ```
 ![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_tipo_contato.PNG?raw=true "Select tipo_contato")
-
+```sql
+SELECT * FROM contato;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/select_contato.PNG?raw=true "Select contato")
 #### 9.2	CONSULTAS DAS TABELAS COM FILTROS WHERE (Mínimo 4)<br>
 ```sql
 SELECT * FROM estoque_unidade WHERE quantidade>12;
