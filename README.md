@@ -337,6 +337,46 @@ INNER JOIN funcionario_sus on (pessoa.cpf=funcionario_sus.fk_pessoa_cpf);
 ```
 ![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/join_6.PNG?raw=true "Select Join")
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇES DE AGRUPAMENTO (Mínimo 6)<br>
+```sql
+SELECT cidadao.cartao_sus, count(cidadao.cartao_sus) as "numero_medicamento" FROM cidadao
+INNER JOIN cidadao_medicamento on (cidadao.cartao_sus=cidadao_medicamento.fk_cidadao_cartao_sus)
+INNER JOIN medicamento on (medicamento.id_medicamento=cidadao_medicamento.fk_medicamento_id_medicamento)
+group by cidadao.cartao_sus;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/group_1.PNG?raw=true "Select group")
+```sql
+SELECT DISTINCT cidadao.cartao_sus FROM cidadao
+INNER JOIN cidadao_medicamento on (cidadao.cartao_sus=cidadao_medicamento.fk_cidadao_cartao_sus)
+INNER JOIN medicamento on (medicamento.id_medicamento=cidadao_medicamento.fk_medicamento_id_medicamento);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/group_2.PNG?raw=true "Select group")
+```sql
+SELECT estado.nome_estado, count(logradouro.cep) as "qtd_ruas" FROM estado
+INNER JOIN municipio on (estado.id_estado=municipio.fk_estado_id_estado)
+INNER JOIN bairro on (municipio.id_municipio=bairro.fk_municipio_id_municipio)
+INNER JOIN logradouro on (bairro.id_bairro=logradouro.fk_bairro_id_bairro)
+group by estado.nome_estado;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/group_3.PNG?raw=true "Select group")
+```sql
+SELECT estado.nome_estado, count(bairro.id_bairro) as "qtd_bairros" FROM estado
+INNER JOIN municipio on (estado.id_estado=municipio.fk_estado_id_estado)
+INNER JOIN bairro on (municipio.id_municipio=bairro.fk_municipio_id_municipio)
+group by estado.nome_estado;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/group_4.PNG?raw=true "Select group")
+```sql
+SELECT estado.nome_estado, count(municipio.id_municipio) as "qtd_cidades" FROM estado
+INNER JOIN municipio on (estado.id_estado=municipio.fk_estado_id_estado)
+group by estado.nome_estado;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/group_5.PNG?raw=true "Select group")
+```sql
+SELECT pessoa.cpf, count(contato.fk_pessoa_cpf) from pessoa
+INNER JOIN contato on (contato.fk_pessoa_cpf=pessoa.cpf)
+group by pessoa.cpf;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/group_6.PNG?raw=true "Select group")
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
         a) Uma junção que envolva Self Join
