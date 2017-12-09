@@ -378,7 +378,85 @@ group by pessoa.cpf;
 ```
 ![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/group_6.PNG?raw=true "Select group")
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
+```sql
+SELECT cidadao.cartao_sus, unidade_saude.nome FROM cidadao
+LEFT JOIN unidade_saude on (cidadao.fk_unidade_saude_id_posto=unidade_saude.id_posto);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/left_1.PNG?raw=true "Select left")
+```sql
+SELECT pessoa.nome, funcionario_sus.matricula FROM pessoa
+LEFT JOIN funcionario_sus on (pessoa.cpf=funcionario_sus.fk_pessoa_cpf);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/left_2.PNG?raw=true "Select left")
+```sql
+SELECT cidadao.cartao_sus, unidade_saude.nome FROM cidadao
+RIGHT JOIN unidade_saude on (cidadao.fk_unidade_saude_id_posto=unidade_saude.id_posto);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/right_1.PNG?raw=true "Select left")
+```sql
+SELECT pessoa.nome, funcionario_sus.matricula FROM pessoa
+RIGHT JOIN funcionario_sus on (pessoa.cpf=funcionario_sus.fk_pessoa_cpf);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/right_2.PNG?raw=true "Select left")
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
-        a) Uma junção que envolva Self Join
-        b) Outras junções com views que o grupo considere como sendo de relevante importância para o trabalho
+```sql
+CREATE VIEW Cidadao_endereco as
+SELECT pessoa.nome, cidadao.cartao_sus, logradouro.nome_rua, bairro.nome_bairro, municipio.nome_municipio, estado.nome_estado FROM pessoa
+INNER JOIN cidadao on (cidadao.fk_pessoa_cpf=pessoa.cpf)
+INNER JOIN logradouro on (logradouro.cep=cidadao.fk_logradouro_cep)
+INNER JOIN bairro on (bairro.id_bairro=logradouro.fk_bairro_id_bairro)
+INNER JOIN municipio on (municipio.id_municipio=bairro.fk_municipio_id_municipio)
+INNER JOIN estado on (estado.id_estado=municipio.fk_estado_id_estado);
+```
+```sql
+CREATE VIEW Cidadao_contato as
+SELECT pessoa.nome, pessoa.cpf, cidadao.cartao_sus, contato.descricao_contato FROM pessoa
+INNER JOIN cidadao on (cidadao.fk_pessoa_cpf=pessoa.cpf)
+INNER JOIN contato on (pessoa.cpf=contato.fk_pessoa_cpf);
+```
+```sql
+CREATE VIEW Num_medicamentos as
+SELECT cidadao.cartao_sus, count(cidadao.cartao_sus) as "numero_medicamento" FROM cidadao
+INNER JOIN cidadao_medicamento on (cidadao.cartao_sus=cidadao_medicamento.fk_cidadao_cartao_sus)
+INNER JOIN medicamento on (medicamento.id_medicamento=cidadao_medicamento.fk_medicamento_id_medicamento)
+group by cidadao.cartao_sus;
+```
+```sql
+SELECT a.nome, b.nome from
+pessoa a, pessoa b
+WHERE a.cpf<>b.cpf;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/self_1.PNG?raw=true "Select self")
+```sql
+SELECT a.nome_bairro, b.nome_bairro
+from bairro a, bairro b
+WHERE a.fk_municipio_id_municipio=b.fk_municipio_id_municipio AND a.id_bairro<>b.id_bairro;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/self_2.PNG?raw=true "Select self")
+```sql
+SELECT a.nome_rua, b.nome_rua
+from logradouro a, logradouro b
+WHERE a.fk_bairro_id_bairro<>b.fk_bairro_id_bairro;
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/self_3.PNG?raw=true "Select self")
 #### 9.10	SUBCONSULTAS (Mínimo 3)<br>
+```sql
+SELECT * from pessoa
+where nome = ( SELECT pessoa.nome where nome like '%an');
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/sub_1.PNG?raw=true "Select sub")
+```sql
+SELECT * from pessoa
+where nome = ( SELECT pessoa.nome where nome like 'T%');
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/sub_2.PNG?raw=true "Select sub")
+```sql
+SELECT * from pessoa
+where nome = ( SELECT pessoa.nome where nome like 'J%');
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/sub_3.PNG?raw=true "Select sub")
+```sql
+SELECT * from cidadao where
+cidadao.fk_logradouro_cep = (select logradouro.cep  from logradouro where logradouro.nome_rua like '%Nascimento');
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/sub_4.PNG?raw=true "Select sub")
