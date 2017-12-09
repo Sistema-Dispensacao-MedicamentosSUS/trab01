@@ -12,8 +12,8 @@ Yan Carlos Cordeiro Pitangui: yanpitangui@gmail.com<br>
 Hoje o sistema dispensação de medicamentos do SUS funciona de forma manual sem o uso de nenhum sistema informatizado para o atendimento a população.<br> O nosso projeto propõe que o usuário do sistema de saúde possa saber o estoque do posto de saúde e receber a notificação da chegada do medicamento,para assim tornar o processo mais conveniente para o usuário e e agilizar os processos de retirada.<br>
 
 ### 3.MINI-MUNDO<br>
-O funcionário do posto de saúde faz o cadastro dos medicamentos disponíveis para a população, e a manutenção das informações no sistema (entrada e saída de medicamentos,quantidade que chegou em estoque,quantidade que foi retirada, atualização e cadastro dos dados do cidadão)é ele também que irá fazer a entrega dos medicamentos na hora que o usuário for fazer a retirada dos medicamentos.<br>
-O usuário do sistema faz o login no sistema com o seu CPF ou cartão do sus, e recebe uma listagem dos medicamentos que ele requereu e estão disponíveis na unidade de saúde do bairro em que ele foi cadastrado, bem como uma listagem com seus dados básicos,relatorio dos ultimos 3 meses contendo quais medicamentos foram requeridos em cada mes,também sera mostrado se tem os medicamentos que ele pediu nas unidades centrais no caso as estaduais ou municipais. Quando existe falta de medicamentos, o cidadão deverá receber uma notificação quando o estoque estiver disponível, bem como o prazo máximo para retirada. Caso contrário,ele ficará sem os medicamentos,não se tem privilegio nem fila de espera,o cidadão terá que ir no posto de saúde do bairro que ele foi cadastrado e fazer a retirada no local fisico onde esta se encontra.O cidadão so podera se cadastrar em um bairro,o cadastro dos usuários vai ser feito so para pessoas residentes no estado do espirito santo assim também como as unidades de saúde cadastradas.  
+O funcionário do posto de saúde faz o cadastro dos medicamentos disponíveis para a população, e a manutenção das informações no sistema (entrada e saída de medicamentos,quantidade que chegou em estoque,quantidade que foi retirada, atualização e cadastro dos dados do cidadão)é ele também que irá fazer a entrega dos medicamentos na hora que o usuário for fazer a retirada dos medicamentos.
+O usuário do sistema faz o login no sistema com o seu CPF ou cartão do sus, e recebe uma listagem dos medicamentos que ele requereu e estão disponíveis na unidade de saúde do bairro em que ele foi cadastrado, bem como uma listagem com seus dados básicos,relatorio dos ultimos 3 meses contendo quais medicamentos foram requeridos em cada mes,também sera mostrado se tem os medicamentos que ele pediu nas unidades centrais no caso as estaduais ou municipais. Quando existe falta de medicamentos, o cidadão deverá receber uma notificação quando o estoque estiver disponível, bem como o prazo máximo para retirada. Caso contrário,ele ficará sem os medicamentos,não se tem privilegio nem fila de espera,o cidadão terá que ir no posto de saúde do bairro que ele foi cadastrado e fazer a retirada no local fisico onde esta se encontra.O cidadão so podera se cadastrar em um bairro,o cadastro dos usuários vai ser feito so para pessoas residentes no estado do espirito santo assim também como as unidades de saúde cadastradas.
 
 ### 4.RASCUNHOS BÁSICOS DA INTERFACE (MOCKUPS)<br>
 Neste ponto a codificação não e necessária, somente as ideias de telas devem ser criadas, o princípio aqui é pensar na criação da interface para identificar possíveis informações a serem armazenadas ou descartadas <br>
@@ -283,8 +283,59 @@ DELETE FROM pessoa WHERE nome LIKE '%gna';
 UPDATE contato SET descricao_contato='thiaguinho@gmail.com' WHERE id_contato=4;
 ```
 #### 9.6	CONSULTAS COM JUNÇÃO E ORDENAÇÃO (Mínimo 6)<br>
-        a) Uma junção que envolva todas as tabelas possuindo no mínimo 3 registros no resultado
-        b) Outras junções que o grupo considere como sendo as de principal importância para o trabalho
+```sql
+SELECT * FROM cidadao 
+INNER JOIN pessoa on (pessoa.cpf=cidadao.FK_Pessoa_cpf)
+INNER JOIN contato on (pessoa.cpf=contato.FK_Pessoa_cpf)
+INNER JOIN tipo_contato on (tipo_contato.id_tp_contato=contato.FK_Tipo_contato_id_tp_contato)
+INNER JOIN logradouro on (cidadao.FK_Logradouro_cep=logradouro.cep)
+INNER JOIN bairro on (logradouro.FK_Bairro_id_bairro=bairro.id_bairro)
+INNER JOIN municipio on (municipio.id_municipio=bairro.FK_Municipio_id_municipio)
+INNER JOIN estado on (municipio.FK_Estado_id_estado=estado.id_estado)
+INNER JOIN unidade_saude on (unidade_saude.id_posto=cidadao.FK_Unidade_saude_id_posto)
+INNER JOIN tipo_unidade on (unidade_saude.FK_Tipo_unidade_id_tp_unidade=tipo_unidade.id_tp_unidade)
+INNER JOIN estoque on (unidade_saude.id_posto=estoque.FK_unidade_saude_id_posto)
+INNER JOIN lote_medicamentos on (estoque.FK_lote_medicamentos_id_lote=lote_medicamentos.id_lote)
+INNER JOIN medicamento on (medicamento.id_medicamento=estoque.FK_medicamento_id_medicamento)
+INNER JOIN cidadao_medicamento on (cidadao_medicamento.FK_cidadao_cartao_sus=cidadao.cartao_sus)
+INNER JOIN retirada on (retirada.FK_cidadao_cartao_sus=cidadao.cartao_sus)
+INNER JOIN funcionario_sus on (funcionario_sus.matricula=retirada.FK_funcionario_sus_matricula);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/join_1.PNG?raw=true "Select Join")
+
+```sql
+SELECT pessoa.nome, pessoa.cpf, cidadao.cartao_sus, contato.descricao_contato FROM pessoa
+INNER JOIN cidadao on (cidadao.fk_pessoa_cpf=pessoa.cpf)
+INNER JOIN contato on (pessoa.cpf=contato.fk_pessoa_cpf);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/join_2.PNG?raw=true "Select Join")
+```sql
+SELECT cidadao.cartao_sus, medicamento.nome FROM cidadao
+INNER JOIN cidadao_medicamento on (cidadao.cartao_sus=cidadao_medicamento.fk_cidadao_cartao_sus)
+INNER JOIN medicamento on (medicamento.id_medicamento=cidadao_medicamento.fk_medicamento_id_medicamento);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/join_3.PNG?raw=true "Select Join")
+```sql
+SELECT estado.nome_estado, municipio.nome_municipio, bairro.nome_bairro, logradouro.nome_rua FROM estado
+INNER JOIN municipio on (estado.id_estado=municipio.fk_estado_id_estado)
+INNER JOIN bairro on (municipio.id_municipio=bairro.fk_municipio_id_municipio)
+INNER JOIN logradouro on (bairro.id_bairro=logradouro.fk_bairro_id_bairro);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/join_4.PNG?raw=true "Select Join")
+```sql
+SELECT pessoa.nome, cidadao.cartao_sus, logradouro.nome_rua, bairro.nome_bairro, municipio.nome_municipio, estado.nome_estado FROM pessoa
+INNER JOIN cidadao on (cidadao.fk_pessoa_cpf=pessoa.cpf)
+INNER JOIN logradouro on (logradouro.cep=cidadao.fk_logradouro_cep)
+INNER JOIN bairro on (bairro.id_bairro=logradouro.fk_bairro_id_bairro)
+INNER JOIN municipio on (municipio.id_municipio=bairro.fk_municipio_id_municipio)
+INNER JOIN estado on (estado.id_estado=municipio.fk_estado_id_estado);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/join_5.PNG?raw=true "Select Join")
+```sql
+SELECT pessoa.nome, funcionario_sus.matricula FROM pessoa
+INNER JOIN funcionario_sus on (pessoa.cpf=funcionario_sus.fk_pessoa_cpf);
+```
+![Alt text](https://github.com/Sistema-Dispensacao-MedicamentosSUS/trab01/blob/master/imagens/join_6.PNG?raw=true "Select Join")
 #### 9.7	CONSULTAS COM GROUP BY E FUNÇES DE AGRUPAMENTO (Mínimo 6)<br>
 #### 9.8	CONSULTAS COM LEFT E RIGHT JOIN (Mínimo 4)<br>
 #### 9.9	CONSULTAS COM SELF JOIN E VIEW (Mínimo 6)<br>
